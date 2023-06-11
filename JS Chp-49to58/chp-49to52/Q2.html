@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Details</title>
+  <style>
+    .item {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .item .short-details {
+      display: block;
+      overflow: hidden;
+      max-height: 80px;
+    }
+
+    .item .full-details {
+      display: none;
+    }
+
+    .item .read-more {
+      display: block;
+      margin-top: 10px;
+      text-decoration: underline;
+      color: blue;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function showFullDetails(itemId) {
+      var item = document.getElementById(itemId);
+      var shortDetails = item.querySelector(".short-details");
+      var fullDetails = item.querySelector(".full-details");
+      var readMore = item.querySelector(".read-more");
+
+      shortDetails.style.display = "none";
+      fullDetails.style.display = "block";
+      readMore.style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <div class="item" id="item1">
+    <h2>Item 1</h2>
+    <div class="short-details">
+      <p>This is a short description of Item 1.</p>
+    </div>
+    <div class="full-details">
+      <p>This is the full description of Jannat Ke Pattay. The life of LLB (Hons) student Haya Suleman took an interesting turn when she received scholarship to study a five-month semester at a university in Turkey, but the circumstances became grave when someone leaked a private video of her made at a party on the internet. To keep the video away from the eyes of the members of her traditional family and to avoid any complications, she had to contact an officer of the Cyber Crime Cell who could have had her video removed. But soon she was unsettled by the fact that this faceless officer already knew so much about her.
+        Will Haya be able to get that video removed from the internet? Will she be able to go to Turkey? And more importantly, will she finally be able to meet "him", him who she has never met before but has been searching for for many years?
+        From the streets of Istanbul to the Bosporus sea, from the caves of Cappadocia to the torture cells in Indian jails, Jannat Kay Pattay (English: Leaves of Heaven) is like a roller coaster ride in which most of your guesses will be proved wrong and this mysterious story will keep its secrets safe till the last sentence. Because keeping secrets is an art and not everyone knows it!</p>
+    </div>
+    <div class="read-more" onclick="showFullDetails('item1')">Read more</div>
+  </div>
+
+  <div class="item" id="item2">
+    <h2>Item 2</h2>
+    <div class="short-details">
+      <p>This is a short description of Item 2.</p>
+    </div>
+    <div class="full-details">
+      <p>This is the full description of Peer-e-Kamil. Peer-e-Kamil (English: The Perfect Mentor) is a story focusing on a deviational sect which violates the finality of our Prophet (P.B.U.H) meanwhile, narrating a heart wrenching journey of two unhappy souls; Salaar Sikandar, a genius with an outstanding I.Q who has complicated queries about life and Imama Hashim, an ordinary girl with a stable family. Both are poles apart in terms of spiritual awakening. Destiny maneuvers their lives to cross each other’s paths, until Salaar falls in love with Imama after facing a horrifying experience that totally changes the course of his life.</p>
+    </div>
+    <div class="read-more" onclick="showFullDetails('item2')">Read more</div>
+  </div>
+</body>
+</html>
+
